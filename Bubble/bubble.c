@@ -10,7 +10,7 @@ void bubble_sort(int List[] , int Limit) {
     }
     printf("sorted list is:-");
     for(index1 = 0 ; index1 < Limit ; index1++) {
-        printf("%d" , List[index1]);
+        printf("%d\t" , List[index1]);
     }
     printf("\n");
 }

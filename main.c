@@ -22,11 +22,11 @@ void main() {
         
         switch(choice) {
             case 1: insertion_sort(List , Limit);
-                    main();
+                    
             break;
 
             case 2: bubble_sort(List , Limit);
-                    main();
+                
             break;
 
             case 3: printf("come again\n");
