@@ -4,8 +4,9 @@
 #include "Bubble/bubble.c"
 #include "Quick/quick.c"
 #include "Radix/radix.c"
+#include "Merge/merge.c"
 
-void  print(int List[] , int Limit);
+void print(int List[] , int Limit);
 
 void main() {
     int Limit , List[100] , index;
@@ -22,7 +23,7 @@ void main() {
      do {
         printf("\n*****MENU*****\n");
         printf("_______________\n");
-        printf("1. Insertion sort\n2. Bubble sort\n3. Quick sort\n4. Radix sort\n5. Exit\n");
+        printf("1. Insertion sort\n2. Bubble sort\n3. Quick sort\n4. Radix sort\n5. Merge sort\n6. Exit\n");
         printf("Enter your choice : ");
         scanf("%d" , &choice);
         
@@ -43,7 +44,11 @@ void main() {
                      print(List , Limit);
             break;
 
-            case 5 : printf("Visit again\n");
+            case 5 : merge_sort(List, Base, Limit);
+                     print(List , Limit);
+            break;
+
+            case 6 : printf("Visit again\n");
             break;
 
             default : printf("invalid option\n");
@@ -51,7 +56,7 @@ void main() {
         }
  
          printf("\n");
-    } while(choice != 5);
+    } while(choice != 6);
 }
 
 void  print(int List[] , int Limit) {
