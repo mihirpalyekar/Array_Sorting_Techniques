@@ -7,10 +7,12 @@
 #include "Merge/merge.c"
 #include "Shell/shell.c"
 
+#define MAX_ARRAY_SIZE 100
+
 void print(int List[] , int Limit);
 
 void main() {
-    int Limit , List[100] , index;
+    int Limit , List[MAX_ARRAY_SIZE] , index;
     int choice, Base = 0, index1;
 
     printf("Enter limit of the list : ");
