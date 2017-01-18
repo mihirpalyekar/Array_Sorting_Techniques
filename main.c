@@ -5,6 +5,7 @@
 #include "Quick/quick.c"
 #include "Radix/radix.c"
 #include "Merge/merge.c"
+#include "Shell/shell.c"
 
 void print(int List[] , int Limit);
 
@@ -23,7 +24,7 @@ void main() {
      do {
         printf("\n*****MENU*****\n");
         printf("_______________\n");
-        printf("1. Insertion sort\n2. Bubble sort\n3. Quick sort\n4. Radix sort\n5. Merge sort\n6. Exit\n");
+        printf("1. Insertion sort\n2. Bubble sort\n3. Quick sort\n4. Radix sort\n5. Merge sort\n6. Shell sort\n7. Exit\n");
         printf("Enter your choice : ");
         scanf("%d" , &choice);
         
@@ -48,7 +49,11 @@ void main() {
                      print(List , Limit);
             break;
 
-            case 6 : printf("Visit again\n");
+            case 6 : shell_sort(List , Limit);
+                     print(List , Limit);
+            break;
+
+            case 7 : printf("Visit again\n");
             break;
 
             default : printf("invalid option\n");
@@ -56,7 +61,7 @@ void main() {
         }
  
          printf("\n");
-    } while(choice != 6);
+    } while(choice != 7);
 }
 
 void  print(int List[] , int Limit) {
