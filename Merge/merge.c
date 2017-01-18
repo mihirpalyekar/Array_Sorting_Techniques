@@ -27,8 +27,7 @@ void merge(int List[], int Base, int index, int Limit) {
             array[index3] = List[index1];
             index1++;
             index3++;
-        }
-        else {
+        } else {
             array[index3] = List[index2];
             index2++;
             index3++;

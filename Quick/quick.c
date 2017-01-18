@@ -14,7 +14,7 @@ int partition(int List[] ,int Base, int Limit) {
             index2--;
         } while (temparory1 < List[index2]);
 
-        if(index1 < index2) {
+        if (index1 < index2) {
             temparory2 = List[index1];
             List[index1] = List[index2];
             List[index2] = temparory2;
