@@ -71,7 +71,7 @@ void  print(int List[] , int Limit) {
     
     printf("Sorted list is :\n ");
 
-    for(index1 = 0; index1 < Limit; index1++) {
+    for (index1 = 0; index1 < Limit; index1++) {
         printf("%d\t" , List[index1]);
     }
 

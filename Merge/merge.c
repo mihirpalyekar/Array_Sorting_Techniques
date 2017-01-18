@@ -4,14 +4,14 @@ void merge(int List[], int Base, int index, int Limit);
 
 void merge_sort(int List[], int Base, int Limit) {
 
- int index;
+    int index;
 
- if(Base < Limit) {
-    index = (Base + Limit) / 2;
-    merge_sort(List, Base, index);
-    merge_sort(List, index + 1, Limit);
-    merge(List, Base, index, Limit);
- }   
+    if (Base < Limit) {
+        index = (Base + Limit) / 2;
+        merge_sort(List, Base, index);
+        merge_sort(List, index + 1, Limit);
+        merge(List, Base, index, Limit);
+    }   
 }
 
 void merge(int List[], int Base, int index, int Limit) {
