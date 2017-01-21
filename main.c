@@ -7,6 +7,7 @@
 #include "Merge/merge.c"
 #include "Shell/shell.c"
 #include "Selection/selection.c"
+#include "Heap/heap.c"
 
 #define MAX_ARRAY_SIZE 100
 
@@ -28,7 +29,8 @@ void main() {
         printf("\n*****MENU*****\n");
         printf("_______________\n");
         printf("1. Insertion sort\n2. Bubble sort\n3. Quick sort\n");
-        printf("4. Radix sort\n5. Merge sort\n6. Shell sort\n7. Selection sort\n8. Exit\n");
+        printf("4. Radix sort\n5. Merge sort\n6. Shell sort\n7. Selection sort\n");
+        printf("8. heap sort\n9. Exit\n");
         printf("Enter your choice : ");
         scanf("%d" , &choice);
         
@@ -61,7 +63,11 @@ void main() {
                      print(List , Limit);
             break;
 
-            case 8 : printf("Visit again\n");
+            case 8 : heap_sort(List , Limit);
+                     print(List , Limit);
+            break;
+
+            case 9 : printf("Visit again\n");
             break;
 
             default : printf("invalid option\n");
@@ -69,7 +75,7 @@ void main() {
         }
  
          printf("\n");
-    } while(choice != 8);
+    } while(choice != 9);
 }
 
 void  print(int List[] , int Limit) {
